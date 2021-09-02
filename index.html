@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="h1">
+        <h1>بسم الله الرحمن الرحيم</h1>
+        <h1>السلام عليكم ورحمة الله وبركاته</h1>
+      </div>
+      <div class="img">
+        <img src="./img/avatar.gif" alt="gif" class="responsive" />
+      </div>
+      <div class="audio">
+        <audio id="audio" controls autoplay>
+          <source src="./sound/andmes.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div class="h2">
+        <h2>"Maukah Engkau Menjadi Permata di Pentas HidupKU"</h2>
+      </div>
+      <div class="btn">
+        <button id="btn_mau" onclick="mau()">Mau</button>
+        <button id="tdk_mau" onmouseover="gamau(this)" style="position: absolute">Enggak</button>
+      </div>
+    </div>
+    <script>
+      function gamau(id) {
+        var mau = document.getElementById("btn_mau");
+        var i = Math.floor(Math.random() * 300) + 1;
+        var j = Math.floor(Math.random() * 100) + mau.offsetTop;
+        id.style.left = i + "px";
+        id.style.top = j + "px";
+      }
+      function mau() {
+        let nama = prompt("Tolong Tulis Nama Lengkap Kamu dan Bapak Kamu Donk ^_^");
+        alert("Bismillah Atas Nama ALLAH dan Restu Kedua Orang Tua \n " + "Saudari " + nama + "\n Bersediakah KAMU Menjadi Istriku?");
+        confirm("Bismillah Atas Nama ALLAH dan Restu Kedua Orang Tua saya Bersedia");
+      }
+    </script>
+  </body>
+</html>
