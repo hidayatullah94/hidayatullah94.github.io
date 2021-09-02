@@ -20,6 +20,7 @@ button {
   align-items: center;
 }
 .container img {
+  display: flex;
   border-radius: 15px;
   margin-bottom: 20px;
 }
