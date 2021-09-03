@@ -41,8 +41,13 @@
       }
       function mau() {
         let nama = prompt("Tolong Tulis Nama Lengkap Kamu dan Bapak Kamu Donk ^_^");
-        alert("Bismillah Atas Nama ALLAH dan Restu Kedua Orang Tua \n " + "Saudari " + nama + "\n Bersediakah KAMU Menjadi Istriku?");
-        confirm("Bismillah Atas Nama ALLAH dan Restu Kedua Orang Tua saya Bersedia");
+        let mau = confirm("Bismillah Atas Nama ALLAH dan Restu Kedua Orang Tua \n " + "Saudari " + nama + "\n Bersediakah KAMU Menjadi Istriku?");
+        if (mau == false) {
+          let tdk = prompt("Emang Alasannya Kenapa Kalo Boleh Tau");
+          alert("Kalo Kamu Bilang '' " + tdk + " '' Yaudah lah Mau Gimana Lagi \n Semoga ALLAH Memberikan Jalan yg Terbaik Buat Kita");
+        } else {
+          alert("Makasih Banyak ya... Saudari " + nama + " Atas Kepercayaan dan Kesedian nya");
+        }
       }
     </script>
   </body>
