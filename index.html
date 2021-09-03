@@ -5,29 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Games</title>
+    <!--link animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <div class="h1">
-        <h1>بسم الله الرحمن الرحيم</h1>
-        <h1>السلام عليكم ورحمة الله وبركاته</h1>
+        <h1 class="animate__animated animate__backInDown">بسم الله الرحمن الرحيم</h1>
+        <h1 class="animate__animated animate__zoomInDown">السلام عليكم ورحمة الله وبركاته</h1>
       </div>
       <div class="img">
-        <img src="./img/avatar.gif" alt="gif" class="responsive" />
+        <img class="animate__animated animate__bounceInLeft" src="./img/avatar.gif" alt="gif" class="responsive" />
       </div>
       <div class="audio">
-        <audio id="audio" controls autoplay>
+        <audio class="animate__animated animate__bounceInRight" id="audio" controls autoplay>
           <source src="./sound/andmes.mp3" type="audio/mpeg" />
         </audio>
       </div>
       <div class="h3">
-        <h3>"Maukah Engkau Menjadi Permata di Pentas HidupKU"</h3>
-        <p>Jika Kau Bersedia Silahkan Tekan Mau dan Play Lagu</p>
+        <h3 class="animate__animated animate__rotateInDownLeft">"Maukah Engkau Menjadi Permata di Pentas HidupKU"</h3>
+        <p class="animate__animated animate__rotateInDownRight">Jika Kau Bersedia Silahkan Tekan Mau dan Play Lagu</p>
       </div>
       <div class="btn">
-        <button id="btn_mau" onclick="mau()">Mau</button>
-        <button id="tdk_mau" onmouseover="gamau(this)" style="position: absolute">Enggak</button>
+        <button class="animate__animated animate__lightSpeedInLeft" id="btn_mau" onclick="mau()">Mau</button>
+        <button class="animate__animated animate__lightSpeedInRight" id="tdk_mau" onmouseover="gamau(this)" style="position: absolute">Enggak</button>
       </div>
     </div>
 

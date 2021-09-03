@@ -52,3 +52,6 @@ p {
   margin-top: 10px;
   margin-bottom: 35px;
 }
+.animate__animated {
+  --animate-duration: 3s;
+}
