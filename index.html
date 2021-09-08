@@ -1,56 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Games</title>
-    <!--link animate.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <!--link css personal-->
     <link rel="stylesheet" href="style.css" />
+    <!--css animate-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- <style>
+      #tara {
+        display: flex;
+        flex-direction: center;
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+    </style> -->
+    <title>application</title>
   </head>
   <body>
     <div class="container">
-      <div class="h1">
-        <h1 class="animate__animated animate__backInDown">بسم الله الرحمن الرحيم</h1>
-        <h1 class="animate__animated animate__zoomInDown">السلام عليكم ورحمة الله وبركاته</h1>
+      <div class="h1 animate__animated animate__slideInDown">
+        <h1>Assalamualaikum Cantik...</h1>
       </div>
-      <div class="img">
-        <img class="animate__animated animate__bounceInLeft" src="./img/avatar.gif" alt="gif" class="responsive" />
+      <div class="gifs" id="gif"></div>
+      <div class="img animate__animated animate__bounceInRight">
+        <img src="./img/avatar.gif" class="img-fluid rounded-3" alt="..." />
       </div>
-      <div class="audio">
-        <audio class="animate__animated animate__bounceInRight" id="audio" controls autoplay>
-          <source src="./sound/andmes.mp3" type="audio/mpeg" />
-        </audio>
+      <div class="h3 animate__animated animate__lightSpeedInLeft">
+        <h3>"Maukah Engkau Menjadi Permata di Pentas HidupKU"</h3>
       </div>
-      <div class="h3">
-        <h3 class="animate__animated animate__rotateInDownLeft">"Maukah Engkau Menjadi Permata di Pentas HidupKU"</h3>
-        <p class="animate__animated animate__rotateInDownRight">Jika Kau Bersedia Silahkan Tekan Mau dan Play Lagu</p>
-      </div>
-      <div class="btn">
-        <button class="animate__animated animate__lightSpeedInLeft" id="btn_mau" onclick="mau()">Mau</button>
-        <button class="animate__animated animate__lightSpeedInRight" id="tdk_mau" onmouseover="gamau(this)" style="position: absolute">Enggak</button>
+      <!-- <div class="sound">
+        <audio id="lagu" src="./sound/andmes.mp3" type="audio/mpeg" hidden="hidden" autoplay controls <audio />
+      </div> -->
+      <div class="d-grid gap-2 d-md-block animate__animated animate__lightSpeedInLeft">
+        <button class="btn btn-primary" id="btn_mau" onclick="mau()" type="button">Mau</button>
+        <button class="btn btn-danger" id="tdk_mau" onclick="gk_mau()" type="button">Gak Mau</button>
       </div>
     </div>
+    <!-- <div id="tara">
+      <iframe id="ba" src="https://giphy.com/embed/fUwUn0ooSFOb9PFz4I" width="80%" height="auto" style="position: absolute" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
+    </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
     <script>
-      function gamau(id) {
-        var mau = document.getElementById("btn_mau");
-        var i = Math.floor(Math.random() * 300) + 1;
-        var j = Math.floor(Math.random() * 100) + mau.offsetTop;
-        id.style.left = i + "px";
-        id.style.top = j + "px";
-      }
       function mau() {
-        let nama = prompt("Tolong Tulis Nama Lengkap Kamu dan Bapak Kamu Donk ^_^");
-        let mau = confirm("Bismillah Atas Nama ALLAH dan Restu Kedua Orang Tua \n " + "Saudari " + nama + "\n Bersediakah KAMU Menjadi Istriku?");
-        if (mau == false) {
-          let tdk = prompt("Emang Alasannya Kenapa Kalo Boleh Tau");
-          alert("Kalo Kamu Bilang '' " + tdk + " '' Yaudah lah Mau Gimana Lagi \n Semoga ALLAH Memberikan Jalan yg Terbaik Buat Kita");
-        } else {
-          alert("Makasih Banyak ya... Saudari " + nama + " Atas Kepercayaan dan Kesedian nya");
+        let audio = new Audio("./sound/andmes.mp3");
+        audio.play();
+
+        // let img = new Image(300, 300);
+        // myimage.src("https://giphy.com/embed/fUwUn0ooSFOb9PFz4I");
+
+        let nama = prompt("Plis.. Masukin Nama Lengkap Kamu dan \n Nama Bapak Kamu yah ^_^");
+        if (nama != null) {
+          let mau = alert('Bismillah Dengan Menyebut Nama Allah Saudari " ' + nama + ' " Maukah Engkau Menjadi Pendamping Hidupku');
+          if (mau != false) {
+            let oke = alert('Makasih ya.. Saudari "' + nama + ' " \n Atas Kesedian dan Keyakinannya ');
+            if (oke != false) {
+              let dor = alert("Aku Ada Sesuatu Buat Kamu Nih..");
+              if (dor != false) {
+                let tara = document.getElementById("gif");
+              }
+            }
+          } else {
+            alert("Kamu Belum Masukin Nama Loh...");
+          }
         }
       }
+
+      function gk_mau() {
+        let nm = prompt("Masukin Nama Lengkap Kamu Donk..!");
+        let why = prompt("Emangnya Kenapa Ko Kamu Gak Mau?");
+        if (why != null) {
+          let ooh = alert('Kalo Kamu Bilang "' + why + ' " Yaudah lah !!');
+          if (ooh != false) {
+            let yakin = confirm('Beneran Nih "' + nm + ' " Kamu GAK Mau Sama Aku?..');
+            if (yakin != false) {
+              let ok = alert("Kamu Gak Nyesel kan Nantinya " + nm + " ?");
+              if (ok != false) {
+                alert("Bener Nih YAH... Aku Gak Bakal Minta 2 X loh...");
+                alert('Daaah "' + nm + ' " Sampai Jumpa...');
+              }
+            } else {
+              let rg = alert("Tuh Kan Mulai Ragu...");
+              if (rg != false) {
+                let ya = confirm("Fix Nih Yah..");
+                alert("Oke lah Kalo Itu Keputusan Kamu bye..");
+              }
+            }
+          }
+        } else {
+          alert("Kasih Tau Donk ALESANNYA Kenapa...!");
+        }
+      }
+
+      // function gamau(id) {
+      //   var mau = document.getElementById("btn_mau");
+      //   var i = Math.floor(Math.random() * 300) + 1;
+      //   var j = Math.floor(Math.random() * 100) + mau.offsetTop;
+      //   id.style.left = i + "px";
+      //   id.style.top = j + "px";
+      // }
     </script>
   </body>
 </html>
